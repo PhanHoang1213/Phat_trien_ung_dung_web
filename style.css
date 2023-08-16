@@ -2,3 +2,7 @@ h1 {
     background-color: #ccc;
     text-decoration: underline;
 }
+
+a {
+    font-size: 20px;
+}
