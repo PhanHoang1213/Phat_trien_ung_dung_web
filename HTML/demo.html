@@ -22,8 +22,10 @@
             text-align: center;
         }
 
-        td {
+        td,
+        th {
             border: 1px solid #ccc;
+            padding: 5px;
         }
     </style>
 </head>
@@ -88,10 +90,13 @@
     </picture>
     <!-- html tables -->
     <table>
+        <colgroup>
+            <col span="2" style="background-color: aqua;">
+        </colgroup>
         <tr>
-            <td>Họ và tên</td>
-            <td>Mã sinh viên</td>
-            <td>Giới tính</td>
+            <th>Họ và tên</th>
+            <th>Mã sinh viên</th>
+            <th>Giới tính</th>
         </tr>
         <tr>
             <td>Nguyễn Văn Hoàng</td>
