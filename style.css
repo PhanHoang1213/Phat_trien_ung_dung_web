@@ -5,4 +5,10 @@ h1 {
 
 a {
     font-size: 20px;
+    display: block;
+}
+
+img {
+    width: 100px;
+    height: 100px;
 }
