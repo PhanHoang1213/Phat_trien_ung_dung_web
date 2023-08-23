@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            width: 300px;
+            margin: auto;
+        }
+
+        .info {
+            margin-top: 5px;
+        }
+
+        button {
+            border: 1px solid #595858;
+            border-radius: 3px;
+            margin-top: 5px;
+        }
+
+        .text_label {
+            display: inline-block;
+            width: 80px;
+        }
+
+        .text_input {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <div class="info">
+            <label class="text_label" for="user_name">User Name:</label>
+            <input class="text_input" name="user_name" type="text" placeholder="User Name">
+        </div>
+        <div class="info">
+            <label class="text_label" for="password">Password:</label>
+            <input class="text_input" name="password" type="password" placeholder="Password">
+        </div>
+        <div class="info">
+            <label for="remember">Remember Me:</label>
+            <input type="checkbox">
+        </div>
+        <button>Log In</button>
+    </form>
+</body>
+
+</html>
