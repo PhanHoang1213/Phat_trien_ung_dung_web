@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label {
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+            margin: 10px 0;
+        }
+
+        select {
+            padding: 5px;
+
+        }
+
+        option {
+            padding: 2px;
+        }
+
+        button {
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+            border: 1px solid #000;
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            padding: 5px 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <label for="major">Lựa Chọn Chuyên Ngành</label>
+        <select name="major" id="major">
+            <option value="">CNTT Địa học</option>
+            <option value="">Công Nghệ Phần Mềm</option>
+            <option value="">Khoa Học Máy Tính</option>
+            <option value="">Tin Học Kinh Tế</option>
+            <option value="">Hệ Thống Thông Tin</option>
+        </select>
+        <label for="subject">Môn Học</label>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>PHP</li>
+        </ul>
+        <label for="feedback">Ý Kiến Phản Hồi</label>
+        <textarea name="feedback" id="" cols="30" rows="10"></textarea>
+        <button>Submit</button>
+    </div>
+</body>
+
+</html>
