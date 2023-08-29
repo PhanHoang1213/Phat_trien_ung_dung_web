@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/640px-Facebook_Logo_%282019%29.png"
+                    alt="Ảnh facebook">
+                <span class="logo_name">Facebook</span>
+            </div>
+            <h2>Đăng ký</h2>
+        </div>
+        <form action="">
+            <div class="name flex">
+                <input class="input_name input_style input_bgr" type="text" placeholder="Họ">
+                <input class="input_name input_style input_bgr" type="text" placeholder="Tên">
+            </div>
+            <div>
+                <input class="contact input_style input_bgr" type="text" placeholder="Số điện thoại hoặc email">
+            </div>
+            <div>
+                <input class="password input_style input_bgr" type="password" placeholder="Mật khẩu mới">
+            </div>
+            <div class="birthday">
+                <span>Ngày sinh</span>
+                <div class="flex">
+                    <select class="date input_style" name="date" id="">
+                        <option value="1">1</option>
+                        <option value="10">10</option>
+                        <option value="30">30</option>
+                    </select>
+                    <select class="date input_style" name="date" id="">
+                        <option value="1">Tháng 1</option>
+                        <option value="10">Tháng 10</option>
+                        <option value="12">Tháng 12</option>
+                    </select>
+                    <select class="date input_style" name="date" id="">
+                        <option value="2000">2000</option>
+                        <option value="2002">2002</option>
+                        <option value="2003">2003</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="gender">
+                <span>Giới tính</span>
+                <div class="flex">
+                    <div class="input_gender input_style">
+                        <label for=" female">Nữ</label>
+                        <input name="gender" type="radio" id="female" class="radio_input">
+                    </div>
+                    <div class="input_gender input_style">
+                        <label for=" male">Nam</label>
+                        <input name="gender" type="radio" id="male" class="radio_input">
+                    </div>
+                    <div class="input_gender input_style">
+                        <label for=" other">Tuỳ chỉnh</label>
+                        <input name="gender" type="radio" id="other" class="radio_input">
+                    </div>
+                </div>
+
+            </div>
+            <div class="submit">
+                <button>Đăng Ký</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
