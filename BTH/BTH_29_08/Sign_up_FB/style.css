@@ -15,6 +15,10 @@
     font-size: 15px;
 }
 
+.input_style:hover {
+    background-color: #efeded;
+}
+
 .input_bgr {
     background-color: #f5f6f7;
 }
@@ -90,6 +94,15 @@ button {
     padding: 8px 40px;
     border-radius: 5px;
     margin: 10px 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #26ae26;
+}
+
+button:active {
+    background-color: #00a400;
 }
 
 .submit {
