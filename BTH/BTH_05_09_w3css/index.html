@@ -31,13 +31,52 @@
         </div>
     </div>
     <div class="w3-row">
-        <div class="w3-col m6 l4 w3-red">
-            <p>6 columns on a medium screen and 4 on a large screen</p>
+        <div class="w3-col m6 l4 w3-red w3-round-xxlarge">
+            <p class="w3-padding-small">6 columns on a medium screen and 4 on a large screen</p>
         </div>
-        <div class="w3-col m6 l8 w3-orange">
-            <p>6 columns on a medium screen and 8 on a large screen</p>
+        <div class="w3-col m6 l8 w3-orange w3-round-xxlarge">
+            <p class="w3-padding-small">6 columns on a medium screen and 8 on a large screen</p>
         </div>
     </div>
+    <!-- <div class="w3-margin-top" style="width: 400px;">
+        <div class="w3-card" style="display: inline-block;">
+            <img src="https://tuoitrebariavungtau.vn/wp-content/uploads/2023/08/483b594bad26a46eaa2e2ea7afc2813f.jpg"
+                alt="" width="400px">
+            <h3 class="w3-center w3-panel w3-yellow">Tranh Phong Cảnh</h3>
+        </div>
+    </div> -->
+    <div class="w3-margin-top" style="margin: auto; width: 1000px;">
+        <div style="position: relative; display: inline-block;">
+            <img class="mySlides"
+                src="https://d1hjkbq40fs2x4.cloudfront.net/2017-08-21/files/landscape-photography_1645.jpg"
+                width="1000px" height="600px">
+            <img class="mySlides" src="https://thuthuatnhanh.com/wp-content/uploads/2021/11/hinh-anh-chill-dep.jpg"
+                width="1000px" height="600px">
+            <img class="mySlides" src="https://antimatter.vn/wp-content/uploads/2022/10/hinh-anh-3d-800x500.jpg"
+                width="1000px" height="600px">
+            <button class="w3-button w3-display-left w3-yellow" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-display-right w3-yellow" onclick="plusDivs(+1)">&#10095;</button>
+        </div>
+    </div>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length };
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }   
+    </script>
 </body>
 
 </html>
