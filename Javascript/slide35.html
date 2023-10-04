@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('button').onclick = function () {
+                let input_a = parseInt(document.querySelector('#input_a').value);
+                let input_b = parseInt(document.querySelector('#input_b').value);
+                let result = input_a + input_b;
+                document.querySelector('#result').innerHTML = result;
+            }
+        })
+    </script>
+</head>
+
+<body>
+    <div>
+        <span>Nhập số a:</span>
+        <input type="text" id="input_a">
+    </div>
+    <div>
+        <span>Nhập số b:</span>
+        <input type="text" id="input_b">
+    </div>
+    <div>
+        <span>Tổng của a và b là:</span>
+        <span id="result"></span>
+    </div>
+    <button>Tính tổng</button>
+</body>
+
+</html>
