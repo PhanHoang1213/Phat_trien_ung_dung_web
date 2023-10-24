@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.color-change').forEach(function (button) {
+                button.onclick = function () {
+                    document.querySelector('#name').style.color = button.dataset.color;
+                };
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1 id="name">Nguyễn Văn Hoàng</h1>
+    <button class="color-change" data-color="yellow">yellow</button>
+    <button class="color-change" data-color="blue">blue</button>
+    <button class="color-change" data-color="green">green</button>
+</body>
+
+</html>
