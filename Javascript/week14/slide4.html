@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('#yellow').onclick = function () {
+                document.querySelector('#name').style.color = 'yellow';
+            }
+            document.querySelector('#blue').onclick = function () {
+                document.querySelector('#name').style.color = 'blue';
+            }
+            document.querySelector('#green').onclick = function () {
+                document.querySelector('#name').style.color = 'green';
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <h1 id="name">Nguyễn Văn Hoàng</h1>
+    <button id="yellow">yellow</button>
+    <button id="blue">blue</button>
+    <button id="green">green</button>
+</body>
+
+</html>
