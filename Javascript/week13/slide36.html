@@ -7,12 +7,14 @@
     <title>Document</title>
     <style>
         .group {
-            margin-top: 10px;
+            margin-top: 15px;
         }
 
         input {
             width: 300px;
-            padding: 3px;
+            padding: 6px;
+            font-size: 16px;
+            outline-color: rgb(37, 156, 246);
         }
 
         button {
@@ -20,8 +22,15 @@
         }
 
         select {
-            width: 300px;
-            padding: 3px;
+            width: 315px;
+            padding: 6px;
+            font-size: 16px;
+            outline-color: rgb(37, 156, 246);
+        }
+
+        .topic {
+            display: inline-block;
+            width: 150px;
         }
     </style>
 </head>
@@ -29,60 +38,119 @@
 <body>
     <form action="" id="form">
         <div class="group">
-            <span>Họ và tên (*):</span>
-            <input type="text">
-            <span></span>
+            <span class="topic">Họ và tên (*):</span>
+            <input type="text" class="input-info">
+            <span class="error"></span>
         </div>
         <div class="group">
-            <span>Tên đăng nhập (*):</span>
-            <input type="text">
-            <span></span>
+            <span class="topic">Tên đăng nhập (*):</span>
+            <input type="text" id="name" class="input-info">
+            <span class="error"></span>
         </div>
         <div class="group">
-            <span>Password (*):</span>
-            <input type="text">
-            <span></span>
+            <span class="topic">Password (*):</span>
+            <input type="text" id="password" class="input-info">
+            <span class="error"></span>
         </div>
         <div class="group">
-            <span>Nhập lại password (*):</span>
-            <input type="text">
-            <span></span>
+            <span class="topic">Nhập lại password (*):</span>
+            <input type="text" id="retype-password" class="input-info">
+            <span class="error"></span>
         </div>
         <div class="group">
-            <span>Quốc tịch (*):</span>
-            <select name="country" id="country">
+            <span class="topic">Quốc tịch (*):</span>
+            <select name="country" id="country" class="input-info">
+                <option disabled selected value="">Chọn một tùy chọn</option>
                 <option value="VietNam">Việt Nam</option>
                 <option value="Russia">Nga</option>
             </select>
-            <span></span>
+            <span class="error"></span>
         </div>
         <div class="group">
-            <span>Email (*):</span>
-            <input type="text">
-            <span></span>
+            <span class="topic">Email (*):</span>
+            <input type="email" id="email" class="input-info">
+            <span class="error"></span>
         </div>
         <div class="group">
-            <span>Số điện thoại (*):</span>
-            <input type="text">
-            <span></span>
+            <span class="topic">Số điện thoại (*):</span>
+            <input type="text" class="input-info">
+            <span class="error"></span>
         </div>
         <div class="group">
-            <span>Câu hỏi bí mật (*):</span>
-            <input type="text">
-            <span></span>
+            <span class="topic">Câu hỏi bí mật (*):</span>
+            <input type="text" class="input-info">
+            <span class="error"></span>
         </div>
         <div class="group">
-            <span>Trả lời (*):</span>
-            <input type="text">
-            <span></span>
+            <span class="topic">Trả lời (*):</span>
+            <input type="text" class="input-info">
+            <span class="error"></span>
         </div>
         <div class="group">
             <button id="check">Kiểm tra</button>
-            <button  id="submit">Đăng ký</button>
+            <button id="submit">Đăng ký</button>
         </div>
     </form>
     <script>
-        
+        var submit = document.querySelector('#check');
+        var inputElements = document.querySelectorAll('.input-info');
+        var name = document.querySelector('#name');
+        var password = document.querySelector('#password');
+        var retype_password = document.querySelector('#retype-password');
+        submit.onclick = function (e) {
+            e.preventDefault();
+
+            Array.from(inputElements).forEach(function (inputElement) {
+                validate(inputElement);
+            });
+        }
+        Array.from(inputElements).forEach(function (inputElement) {
+            inputElement.onfocus = function () {
+                var errorElement = inputElement.parentElement.querySelector('.error')
+                errorElement.innerText = '';
+            }
+        });
+
+
+        function validate(inputElement) {
+            var errorElement = inputElement.parentElement.querySelector('.error')
+            if (isRequired(inputElement)) {
+
+                errorElement.innerText = isRequired(inputElement);
+            } else {
+                errorElement.innerText = '';
+            }
+            if (inputElement == name && inputElement.value != '') {
+                errorElement.innerText = minLength(inputElement)
+            }
+
+            if (inputElement == retype_password && inputElement.value != '') {
+                errorElement.innerText = isConfirm(inputElement, password)
+            }
+            if (inputElement.type == "email" && inputElement.value != '') {
+                errorElement.innerText = isEmail(inputElement)
+            }
+
+
+
+        }
+        function isRequired(selector) {
+            let value = selector.value;
+            return value ? undefined : 'Vui lòng nhập trường này';
+        };
+        function isEmail(selector) {
+            let value = selector.value;
+            let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            return regex.test(value) ? undefined : 'Trường này phải là email!'
+        }
+        function minLength(selector) {
+            let value = selector.value;
+            return value.length >= 8 ? undefined : 'Nhập tối thiểu 8 ký tự'
+        };
+        function isConfirm(selector, password) {
+            let value = selector.value;
+            return value == password.value ? undefined : 'Mật khẩu không trùng khớp'
+        };
     </script>
 </body>
 
