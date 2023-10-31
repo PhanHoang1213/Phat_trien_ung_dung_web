@@ -92,6 +92,7 @@
         </div>
     </form>
     <script>
+        debugger;
         var submit = document.querySelector('#check');
         var inputElements = document.querySelectorAll('.input-info');
         var name = document.querySelector('#name');
@@ -117,14 +118,12 @@
             if (isRequired(inputElement)) {
 
                 errorElement.innerText = isRequired(inputElement);
-            } else {
-                errorElement.innerText = '';
             }
-            if (inputElement == name && inputElement.value != '') {
+            if (inputElement === name && inputElement.value != '') {
                 errorElement.innerText = minLength(inputElement)
             }
 
-            if (inputElement == retype_password && inputElement.value != '') {
+            if (inputElement === retype_password && inputElement.value != '') {
                 errorElement.innerText = isConfirm(inputElement, password)
             }
             if (inputElement.type == "email" && inputElement.value != '') {
@@ -136,20 +135,20 @@
         }
         function isRequired(selector) {
             let value = selector.value;
-            return value ? undefined : 'Vui lòng nhập trường này';
+            return value ? '' : 'Vui lòng nhập trường này';
         };
         function isEmail(selector) {
             let value = selector.value;
             let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-            return regex.test(value) ? undefined : 'Trường này phải là email!'
+            return regex.test(value) ? '' : 'Trường này phải là email!'
         }
         function minLength(selector) {
             let value = selector.value;
-            return value.length >= 8 ? undefined : 'Nhập tối thiểu 8 ký tự'
+            return value.length >= 8 ? '' : 'Nhập tối thiểu 8 ký tự'
         };
         function isConfirm(selector, password) {
             let value = selector.value;
-            return value == password.value ? undefined : 'Mật khẩu không trùng khớp'
+            return value == password.value ? '' : 'Mật khẩu không trùng khớp'
         };
     </script>
 </body>
