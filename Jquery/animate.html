@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#increase").click(function () {
+                $("div").animate({
+                    left: '250px',
+                    height: '+=150px',
+                    width: '+=150px'
+                });
+            });
+            $("#smaller").click(function () {
+                $("div").animate({
+                    left: '0px',
+                    height: '-=150px',
+                    width: '-=150px'
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <button id="increase">phóng to</button>
+    <button id="smaller">thu nhỏ</button>
+
+    <div style="background:#98bf21;color: #fff;height:100px;width:100px;position:absolute;margin-top: 20px;">Nguyễn Văn
+        Hoàng -
+        2121050421</div>
+
+</body>
+
+</html>
