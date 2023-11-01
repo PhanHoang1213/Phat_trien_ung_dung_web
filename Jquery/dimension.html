@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#button1").click(function () {
+                var txt = "";
+                txt += "Rộng: " + $("#div1").width() + "</br>";
+                txt += "Cao: " + $("#div1").height() + "</br>";
+                txt += "Chiều rộng trong: " + $("#div1").innerWidth() + "</br>";
+                txt += "Chiều cao trong:" + $("#div1").innerHeight() + "</br>";
+                txt += "Nội dung : " + $("p").text();
+                $("#div1").html(txt);
+            });
+            $("#button2").click(function () {
+                var txt = "";
+                txt += "Rộng: " + $("#div1").width() + "</br>";
+                txt += "Cao: " + $("#div1").height() + "</br>";
+                txt += "Chiều rộng ngoài: " + $("#div1").outerWidth() + "</br>";
+                txt += "Chiều cao ngoài:" + $("#div1").outerHeight() + "</br>";
+                txt += "Nội dung : " + $("p").text();
+                $("#div1").html(txt);
+            });
+        });
+    </script>
+</head>
+<style>
+    #div1 {
+        height: 100px;
+        width: 300px;
+        padding: 10px;
+        margin: 3px;
+        border: 1px solid blue;
+        background-color: lightblue;
+    }
+</style>
+
+<body>
+
+    <div id="div1">
+        <p>Nguyễn Văn Hoàng</p>
+    </div>
+    <br>
+
+    <button id="button1">Kích thước trong</button>
+    <button id="button2">Kích thước ngoài</button>
+
+</body>
+
+</html>
