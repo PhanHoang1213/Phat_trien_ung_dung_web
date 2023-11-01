@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.ancestors * { 
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+.ancestors1 * { 
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#test").parent().css({"color": "red", "border": "2px solid red"});
+  $("#test1").parentsUntil(".ancestors1").css({"color": "red", "border": "2px solid red"});
+});
+</script>
+</head>
+<body>
+
+<div class="ancestors">
+  <div style="width:500px;">div
+    <ul>ul
+      <li>li
+        <span id="test">Nguyễn Văn Hoàng</span>
+      </li>
+    </ul>   
+  </div>
+</div>
+<div class="ancestors1">
+  <div style="width:500px;">div
+    <ul>ul
+      <li>li
+        <span id="test1">Nguyễn Văn Hoàng</span>
+      </li>
+    </ul>   
+  </div>
+</div>
+
+
+</body>
+</html>
