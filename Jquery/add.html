@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("p").append(" <b>Nguyễn Văn Hoàng</b>.");
+            });
+
+            $("#btn2").click(function () {
+                $("ol").append("<li>DCCTCT66D1</li>");
+            });
+            $("#before").click(function () {
+                $("#info").before("<b>2121050421 - </b>");
+            });
+
+            $("#after").click(function () {
+                $("#info").after("<i> - DCCTCT66D1</i>");
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <p>Họ và tên:</p>
+
+    <ol>
+        <li>Nguyễn Văn Hoàng</li>
+        <li>2121050421</li>
+    </ol>
+
+    <button id="btn1">Append text</button>
+    <button id="btn2">Append list items</button>
+    <div>
+        <div id="info" style="margin-top: 10px;display: inline-block;">Nguyễn Văn Hoàng</div>
+    </div>
+    <button id="before">chèn trước</button>
+    <button id="after">chèn sau</button>
+
+</body>
+
+</html>
