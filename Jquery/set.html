@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#test1").text("Nguyễn Văn Hoàng");
+            });
+            $("#btn2").click(function () {
+                $("#test2").html("<b>2121050421</b>");
+            });
+            $("#btn3").click(function () {
+                $("#test3").val("Hoàng");
+            });
+            $("#change").click(function () {
+                $("#w3s").attr("href", function (i, origValue) {
+                    return origValue + "/jquery/";
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <p id="test1">Họ và tên</p>
+    <p id="test2">Mã sinh viên</p>
+
+    <p>Input field: <input type="text" id="test3" value="Hello"></p>
+    <p><a href="https://www.w3schools.com" id="w3s">W3Schools.com</a></p>
+    <button id="btn1">Set Text</button>
+    <button id="btn2">Set HTML</button>
+    <button id="btn3">Set Value</button>
+    <button id="change">Change href Value</button>
+
+</body>
+
+</html>
