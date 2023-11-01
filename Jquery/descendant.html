@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.descendants * { 
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("div").children("p.first").css({"color": "red", "border": "2px solid red"});
+  $("div").find("span").css({"color": "red", "border": "2px solid yellow"});
+});
+</script>
+</head>
+<body>
+
+<div class="descendants" style="width:500px;">div (current element) 
+  <p class="first">p (child)
+    <span>Nguyễn Văn Hoàng</span>   
+  </p>
+  <p class="second">p (child)
+    <span>Nguyễn Văn Hoàng</span>
+  </p> 
+</div>
+
+</body>
+</html>
