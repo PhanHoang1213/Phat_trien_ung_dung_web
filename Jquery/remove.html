@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("#div1").remove();
+            });
+            $("#btn1").click(function () {
+                $("#div1").empty();
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="div1" style="height:100px;width:300px;border:1px solid black;background-color:yellow;">
+        <p>Nguyễn Văn Hoàng - 2121050421</p>
+    </div>
+    <br>
+
+    <button id="btn">Remove div element</button>
+    <button id="btn1">Empty div element</button>
+
+</body>
+
+</html>
