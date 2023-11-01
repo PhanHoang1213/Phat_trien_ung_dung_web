@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .siblings * {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+
+        button {
+            background-color: rgb(73, 67, 71);
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("div").find('*').css({ "color": "lightgrey", "border": " 2px solid lightgrey" })
+                $("h2").siblings("p").css({ "color": "red", "border": "2px solid red" });
+            });
+            $("#btn2").click(function () {
+                $("div").find('*').css({ "color": "lightgrey", "border": " 2px solid lightgrey" })
+                $("h2").nextAll().css({ "color": "red", "border": "2px solid red" });
+            });
+        });
+    </script>
+</head>
+
+<body class="siblings">
+
+    <div>div (parent)
+        <p>p</p>
+        <span>span</span>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <p>p</p>
+    </div>
+    <button id="btn1">sibling p</button>
+    <button id="btn2">next all</button>
+</body>
+
+</html>
