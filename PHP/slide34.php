@@ -17,13 +17,13 @@
             <br>
             <p>
                 <label class="w3-text-grey">Name</label>
-                <input class="w3-input w3-border" type="text" required="" autofocus>
+                <input class="w3-input w3-border w3-round" type="text" required="" autofocus>
             </p>
             <p>
                 <label class="w3-text-grey">Email</label>
-                <input class="w3-input w3-border" type="text" required="">
+                <input class="w3-input w3-border w3-round" type="text" required="">
             </p>
-            <input type="submit" value="Submit" class="w3-btn w3-right w3-blue w3-margin-bottom">
+            <input type="submit" value="Submit" class="w3-btn w3-right w3-round w3-blue w3-margin-bottom">
         </form>
     </div>
 </body>
