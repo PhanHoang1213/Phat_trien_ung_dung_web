@@ -16,6 +16,7 @@
     $sql = "SELECT * FROM flights";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
+        echo "<h2 style='text-align:center'>Bảng thông tin chuyến bay</h2>";
         echo "<table class='table table-striped table-bordered' style='width:500px; margin:auto' >";
         echo "<tr>
                 <th>ID</th>;
