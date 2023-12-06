@@ -13,5 +13,5 @@ if ($result->num_rows > 0) {
     }
     echo "</table>";
 } else {
-    echo "No flight in database";
+    echo "<h3 style='text-align:center;'>No flight</h3>";
 }
