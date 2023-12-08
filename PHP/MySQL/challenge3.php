@@ -47,6 +47,11 @@
         require './connect.php';
         $sql = "INSERT INTO passengers (name,flight_id) VALUES ('{$name}', {$flightID})";
         $conn->query($sql);
+        if ($conn->query($sql) === TRUE) {
+            echo "<h3 style='text-align:center'>Đăng ký thành công</h3>";
+        } else {
+            echo "<p style='color: red;'>Error: " . $conn->error . "</p>";
+        }
         $conn->close();
     }
     ?>
