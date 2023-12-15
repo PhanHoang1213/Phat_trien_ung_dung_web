@@ -19,7 +19,11 @@
         <li>
             <div>MENU</div>
         </li>
-        <li><a href="./loginForm.php">Đăng nhập</a></li>
+        <?php
+            if(!isset($_SESSION['userId'])){
+                echo "<li><a href='./loginForm.php'>Đăng nhập</a></li>";
+            }
+        ?>
         <li><a href="">Xem chuyến bay</a></li>
         <li><a href="">Mua vé</a></li>
         <li><a href="">Thêm chuyến bay</a></li>
